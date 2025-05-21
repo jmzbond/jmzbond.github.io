@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <html lang-"en">
 
 <head>
@@ -47,7 +49,8 @@
   <meta name="google-site-verification" content="467uFqEYebselgcZkhG6vPDoXBDxsvCdUfY73YzVBig" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+
 
 <style>
 
@@ -63,9 +66,35 @@ $success: #71a344;
 /* default light too light, default secondary too dark! needed an intermediate gray that didn't look so white */
 $light: #F0F0F0;
 
+
 /* default secondary too dark, esp. when used as a button next to the blue btn primary, since our blue is lighter than default */
 /* this is the second to last gray shade before overlay text changes to white in html color picker (because we DO still want button text to be black */
 $secondary: #BEBEBE;
+
+.bg-light {
+  background-color: #F0F0F0 !important;
+}
+
+.link-primary {
+  color: #29a6b1 !important;
+  text-decoration-color: transparent !important;
+}
+.link-primary:hover {
+  color: #29a6b1 !important;
+  text-decoration-color: #29a6b1 !important;
+}
+
+.btn-danger {
+  background-color: #b92424 !important
+}
+
+.border-danger {
+  border-color: #b92424 !important;
+}
+
+.text-muted {
+  color: #BEBEBE !important;
+}
 
 
 @media screen and (min-width: 992px){
@@ -105,8 +134,44 @@ $secondary: #BEBEBE;
 
 </style>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
 
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top border border-3 border-danger border-top-0 border-start-0 border-end-0 mb-3">
+            <div class="container-fluid">
+                <div class="row align-items-center w-100">
+                    <div class="col-3 col-sm-2 col-lg-1">
+                        <a class="navbar-brand" href="/">
+                            <img alt="Last Minute Gear" class="w-100 cld-responsive" src="https://res.cloudinary.com/www-lastmingear-com/image/upload/c_scale,dpr_auto,f_auto,w_auto/c_limit,w_auto/Logo.jpg"/>
+                        </a>
+                    </div>
+
+                    <div class="col-auto flex-grow-1 text-end">
+                        <!-- text-end on above helps below navbar-toggler button pull to right on small screens -->
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse w-100 justify-content-end" id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                <!-- to get nav-items to pull to end: -->
+                                <!-- removed default classes: "me-auto mb-2 mb-lg-0" from ul.navbar-nav -->
+                                <!-- added "w-100 justify-content-end" to div.navbar-collapse to get the nav-items to pull to end -->
+                                <!-- added "flex-grow-1" to parent div.col -->
+
+                                <li class="nav-item px-2 ">
+                                    <a class="nav-link text-dark" href="/#how-it-works">How it works</a>
+                                </li>
+                                <li class="nav-item px-2 ">
+                                    <a class="nav-link text-dark" href="/#expert-help">Expert help</a>
+                                </li>
+                                <li class="nav-item px-2 ">
+                                    <a class="nav-link text-dark" href="/#about-the-founder">About the founder</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
 
 <main class="py-3">
   <!-- py clears top from navbar as well as bottom, so content never presses directly to bottom of screen -->
@@ -130,13 +195,13 @@ $secondary: #BEBEBE;
               in San Francisco -->
             </h1>
               <p class="fs-5">We're closing down, this is your chance to buy our used rental gear that's now highly discounted. Appointment-only (text +1-415-813-1881 or email info@lastminutegear.com)</p>
-              <p class="text-muted">In short, this was a delayed COVID casualty, you can read our founder's LinkedIn post <a href="https://www.linkedin.com/posts/jmzbond_im-giving-away-my-small-business-for-free-activity-7298015320978378752-CBA-?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAGU7qABgb79_OcmMg2DBDHnuEft65XvUYk" target="_blank">here</a>. Thank you to those who supported us over the last 10 years!</p>
+              <p class="text-muted">In short, this was a delayed COVID casualty, you can read our founder's LinkedIn post <a href="https://www.linkedin.com/posts/jmzbond_im-giving-away-my-small-business-for-free-activity-7298015320978378752-CBA-?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAGU7qABgb79_OcmMg2DBDHnuEft65XvUYk" class="link-primary" target="_blank">here</a>. Thank you to those who supported us over the last 10 years!</p>
             <!-- <a class="btn btn-lg btn-danger order-online" href='/place-order'>Get gear now!</a> -->
           </div>
         </div>
       </div>
       <div class="col-12 col-lg-6 offset-lg-1">
-        <img alt="Rack of sleeping bags" title="Rack of sleeping bags" class="card-img-top w-100 cld-responsive" data-src="https://res.cloudinary.com/www-lastmingear-com/image/upload/c_fill,dpr_auto,f_auto,w_auto/c_limit,w_auto/v1/Miscellaneous/grant_store_small.jpg" />
+        <img alt="Rack of sleeping bags" title="Rack of sleeping bags" class="card-img-top w-100 cld-responsive" src="https://res.cloudinary.com/www-lastmingear-com/image/upload/c_fill,dpr_auto,f_auto,w_auto/c_limit,w_auto/v1/Miscellaneous/grant_store_small.jpg" />
       </div>
     </div>
   </section>
@@ -150,7 +215,7 @@ $secondary: #BEBEBE;
 
         <h2 class="text-center">Limited rentals are still available</h2>
         <p class="text-center m-0">We are still renting gear for Climbing (e.g., crash pads or climbing shoes) or Snowsports (e.g., snowshoes and snow clothing for mountaineering).</p>
-        <p class="text-center">All pick ups & returns will be at our <a class="link" href="https://maps.app.goo.gl/qqJU3xSUJLWQbHHh7" target="_blank">downtown San Francisco location</a>; no more delivery services or neighborhood outposts available</p>
+        <p class="text-center">All pick ups & returns will be at our <a class="link-primary" href="https://maps.app.goo.gl/qqJU3xSUJLWQbHHh7" target="_blank">downtown San Francisco location</a>; no more delivery services or neighborhood outposts available</p>
 
 
         <div class="row mt-4">
@@ -204,7 +269,7 @@ $secondary: #BEBEBE;
           <div class="card">
             <div class=" ratio ratio-4x3">
               <!-- using ratio allows image heights to align well -->
-              <img alt="Rack of sleeping bags" title="Rack of sleeping bags" class="card-img-top w-100 cld-responsive" data-src="https://res.cloudinary.com/www-lastmingear-com/image/upload/c_fill,dpr_auto,f_auto,w_auto/c_limit,w_auto/v1/Protips/jumbotron/how_to_store_and_maintain_your_gear.jpg" />
+              <img alt="Rack of sleeping bags" title="Rack of sleeping bags" class="card-img-top w-100 cld-responsive" src="https://res.cloudinary.com/www-lastmingear-com/image/upload/c_fill,dpr_auto,f_auto,w_auto/c_limit,w_auto/v1/Protips/jumbotron/how_to_store_and_maintain_your_gear.jpg" />
             </div>
             <div class="card-body">
               <h5 class="card-title"><a class="text-reset stretched-link" target="_blank" href="https://www.lastminutegear.com/gear-guides">Gear Guides</a></h5>
@@ -214,7 +279,7 @@ $secondary: #BEBEBE;
           <div class="card">
             <div class=" ratio ratio-4x3">
               <!-- using ratio allows image heights to align well -->
-              <img alt="Boulder with gear in front of Half Dome in Yosemite National Park" title="Half Dome" class="w-100 card-img-top cld-responsive" data-src="https://res.cloudinary.com/www-lastmingear-com/image/upload/c_fill,dpr_auto,f_auto,w_auto/c_limit,w_auto/v1/Protips/Half%20Dome/Route_J.jpg" />
+              <img alt="Boulder with gear in front of Half Dome in Yosemite National Park" title="Half Dome" class="w-100 card-img-top cld-responsive" src="https://res.cloudinary.com/www-lastmingear-com/image/upload/c_fill,dpr_auto,f_auto,w_auto/c_limit,w_auto/v1/Protips/Half%20Dome/Route_J.jpg" />
             </div>
             <div class="card-body">
               <h5 class="card-title"><a class="text-reset stretched-link" target="_blank" href="https://www.lastminutegear.com/protips">Protips</a></h5>
@@ -224,7 +289,7 @@ $secondary: #BEBEBE;
           <div class="card">
             <div class=" ratio ratio-4x3">
               <!-- using ratio allows image heights to align well -->
-              <img alt="Zipper on bag" title="Zipper on bag" class="card-img-top w-100 cld-responsive" data-src="https://res.cloudinary.com/www-lastmingear-com/image/upload/c_fill,dpr_auto,f_auto,w_auto/c_limit,w_auto/v1/Jumbotron/gear_repair.jpg" />
+              <img alt="Zipper on bag" title="Zipper on bag" class="card-img-top w-100 cld-responsive" src="https://res.cloudinary.com/www-lastmingear-com/image/upload/c_fill,dpr_auto,f_auto,w_auto/c_limit,w_auto/v1/Jumbotron/gear_repair.jpg" />
             </div>
             <div class="card-body">
               <h5 class="card-title"><a class="text-reset stretched-link" target="_blank" href="https://www.lastminutegear.com/gear-repair-and-cleaning-services">Repair &amp; Cleaning</a></h5>
@@ -243,10 +308,10 @@ $secondary: #BEBEBE;
         <h2>About the founder</h2>
       </div>
       <div class="col-8 offset-2 col-md-4 offset-md-4 col-lg-2 offset-lg-5 pb-2">
-        <img alt="Founder standing in front of shop" title="Founder standing in front of shop" itemprop="image" class="w-100 cld-responsive" data-src="https://res.cloudinary.com/www-lastmingear-com/image/upload/c_scale,dpr_auto,f_auto,r_max,w_auto/c_limit,w_auto/v1/Team/james2.png" />
+        <img alt="Founder standing in front of shop" title="Founder standing in front of shop" itemprop="image" class="w-100 cld-responsive" src="https://res.cloudinary.com/www-lastmingear-com/image/upload/c_scale,dpr_auto,f_auto,r_max,w_auto/c_limit,w_auto/v1/Team/james2.png" />
       </div>
       <div class="col-12 offset-0 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-        <p>Hi, I'm <a class="link" target="_blank" href="https://www.linkedin.com/in/jmzbond">James</a>. My first taste of the outdoors was with an inner city youth organization in Texas that let me borrow gear for an upcoming camping trip(read: I have indoorsy parents). These early experiences created a lifelong love for exploring the backcountry. I started Last Minute Gear to do for others what that youth organization did for me: give access to the outdoors, in a low cost way that also doesn't perpetuate unnecessary overconsumption and actually reduces waste.</p>
+        <p>Hi, I'm <a class="link-primary" target="_blank" href="https://www.linkedin.com/in/jmzbond">James</a>. My first taste of the outdoors was with an inner city youth organization in Texas that let me borrow gear for an upcoming camping trip(read: I have indoorsy parents). These early experiences created a lifelong love for exploring the backcountry. I started Last Minute Gear to do for others what that youth organization did for me: give access to the outdoors, in a low cost way that also doesn't perpetuate unnecessary overconsumption and actually reduces waste.</p>
         <!-- <p>Unfortunately COVID has hit us so hard, I am down to the last experiment to try to keep this last, small, independent outdoor gear business alive. If you want to invest in our mission or takeover and run  your very own gear shop, email me: . Read more about our situation in parts , and .</p> -->
       </div>
     </div>
@@ -269,13 +334,10 @@ $secondary: #BEBEBE;
   <div class="row">
     <div class="col-12 col-md-8 offset-md-2">
       <div class="row align-items-center text-center">
-        <div class="col-4">
-          <a class=" text-reset" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="contactInfo" href="#contactInfo">Contact Info</a>
-        </div>
-        <div class="col-4"> 
+        <div class="col-6"> 
           <a class=" text-reset" target="_blank" href="https://www.lastminutegear.com/terms-of-service">Terms of Service</a>
         </div>
-        <div class="col-4">
+        <div class="col-6">
           <a class=" text-reset" target="_blank" href="https://www.lastminutegear.com/privacy-policy">Privacy Policy</a>
         </div>
 <!--         <div class="col-3">
