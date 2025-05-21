@@ -1,1 +1,312 @@
-hello world
+<html lang-"en">
+
+<head>
+
+<title>Buy, Rent, or Borrow gear for Camp, Climb, or Snow</title>
+<meta name="description" content="The most affordable outdoor gear rentals in San Francisco"></meta>
+<meta property="og:image" content="http://res.cloudinary.com/www-lastmingear-com/image/upload/v1426624959/Logo_square.png" ></meta>
+<meta property="og:description" content="The most affordable outdoor gear rentals in San Francisco"></meta>
+<meta property="og:image:width" content="1000" ></meta>
+<meta property="og:image:height" content="500" ></meta>
+
+<link rel="stylesheet" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+
+  <!-- preconnecting (replacing prefetching) speeds up DNS resolve for when images are requested -->
+  <link href="https://res.cloudinary.com/" rel="preconnect">
+
+  <!-- https://fonts.gstatic.com is the font file origin -->
+  <!-- It may not have the same origin as the CSS file (https://fonts.googleapis.com) -->
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin />
+
+  <!-- We use the full link to the CSS file in the rest of the tags -->
+  <link rel="preload"
+        as="style"
+        href="https://fonts.googleapis.com/css?family=Lato:400,300,700" />
+  <link rel="preload"
+        as="style"
+        href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700" />
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Lato:400,300,700"
+        media="print" onload="this.media='all'" />
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700"
+        media="print" onload="this.media='all'" />
+
+  <noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lato:400,300,700" />
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700" />
+  </noscript>
+
+  <link href="https://res.cloudinary.com/www-lastmingear-com/image/upload/v1652512579/Miscellaneous/favicon.ico" rel="shortcut icon">
+  <meta name="google-site-verification" content="467uFqEYebselgcZkhG6vPDoXBDxsvCdUfY73YzVBig" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<style>
+
+/* warn = buy orange */
+$warning: #F09B20;
+/* primary = rent teal */
+$primary: #29a6b1;
+/* danger = logo maroon */
+$danger: #b92424;
+/* success = borrow green */
+$success: #71a344;
+
+/* default light too light, default secondary too dark! needed an intermediate gray that didn't look so white */
+$light: #F0F0F0;
+
+/* default secondary too dark, esp. when used as a button next to the blue btn primary, since our blue is lighter than default */
+/* this is the second to last gray shade before overlay text changes to white in html color picker (because we DO still want button text to be black */
+$secondary: #BEBEBE;
+
+
+@media screen and (min-width: 992px){
+  #hero-content-area {
+    position: relative;
+  }
+
+  #hero-text {
+    position:absolute;
+    bottom:0%;
+  }
+
+  #hero-logo {
+    position:absolute;
+    top:0%;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .hero-logo {
+    width: 35%;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .hero-logo {
+    width: 25%;
+  }
+}
+
+.hero-logo {
+  position:absolute;
+  right:10%;
+  top:11%;
+  /*top not exactly 10%, a little more because text for h1 doesn't start RIGHT at top (text has some natural padding that we can't get rid of within each line)*/
+}
+
+</style>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<main class="py-3">
+  <!-- py clears top from navbar as well as bottom, so content never presses directly to bottom of screen -->
+  
+
+  <!-- navbar already has mb-3 -->
+  <section class="container pt-3 pb-5">
+    <div class="row g-3">
+      <div class="col-12 col-lg-5" id="hero-content-area">
+        <div class="row" id="hero-logo">
+          <div class="col-12">
+            <div class="elfsight-app-ded524fd-9a06-4f18-af47-40c173c177d8" data-elfsight-app-lazy></div>
+          </div>
+        </div>
+        <div class="row" id="hero-text">
+          <div class="col-12">
+            <h1>
+              Buy closeout gear at 50-70% off retail!
+              <!-- The most affordable
+                rental snow clothes
+              in San Francisco -->
+            </h1>
+              <p class="fs-5">We're closing down, this is your chance to buy our used rental gear that's now highly discounted. Appointment-only (text +1-415-813-1881 or email info@lastminutegear.com)</p>
+              <p class="text-muted">In short, this was a delayed COVID casualty, you can read our founder's LinkedIn post <a href="https://www.linkedin.com/posts/jmzbond_im-giving-away-my-small-business-for-free-activity-7298015320978378752-CBA-?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAGU7qABgb79_OcmMg2DBDHnuEft65XvUYk" target="_blank">here</a>. Thank you to those who supported us over the last 10 years!</p>
+            <!-- <a class="btn btn-lg btn-danger order-online" href='/place-order'>Get gear now!</a> -->
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 offset-lg-1">
+        <img alt="Rack of sleeping bags" title="Rack of sleeping bags" class="card-img-top w-100 cld-responsive" data-src="https://res.cloudinary.com/www-lastmingear-com/image/upload/c_fill,dpr_auto,f_auto,w_auto/c_limit,w_auto/v1/Miscellaneous/grant_store_small.jpg" />
+      </div>
+    </div>
+  </section>
+
+  <a name="how-it-works"></a>
+  <section class="container-fluid py-5 bg-light" >
+    <div class="row">
+      <div class="col-12 col-xxl-8 offset-xxl-2"> 
+        <!-- <h2 class="text-center">How It Works</h2>
+        <p class="text-center">The most convenient, no-lines rental experience</p> -->
+
+        <h2 class="text-center">Limited rentals are still available</h2>
+        <p class="text-center m-0">We are still renting gear for Climbing (e.g., crash pads or climbing shoes) or Snowsports (e.g., snowshoes and snow clothing for mountaineering).</p>
+        <p class="text-center">All pick ups & returns will be at our <a class="link" href="https://maps.app.goo.gl/qqJU3xSUJLWQbHHh7" target="_blank">downtown San Francisco location</a>; no more delivery services or neighborhood outposts available</p>
+
+
+        <div class="row mt-4">
+            <div class="col-12 mb-2 mb-sm-0 col-sm-4">
+              <div class="row">
+                <div class="col-10 offset-1">
+                  <p class="text-center m-0 m-sm-2"><i class="bi bi-1-circle-fill text-dark fs-1"></i></p>
+                  <p class="fs-5 text-center">Our online order page is now OFF; please text or email to arrange a rental</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 mb-2 mb-sm-0 col-sm-4">
+              <div class="row">
+                <div class="col-10 offset-1">
+                  <p class="text-center m-0 m-sm-2"><i class="bi bi-2-circle-fill text-dark fs-1"></i></p>
+                  <p class="fs-5 text-center">Pick up 24/7 with <a href='https://www.lastminutegear.com/self-service' class='link-primary'>self-service</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 mb-2 mb-sm-0 col-sm-4">
+              <div class="row">
+                <div class="col-10 offset-1">
+                  <p class="text-center m-0 m-sm-2"><i class="bi bi-3-circle-fill text-dark fs-1"></i></p>
+                  <p class="fs-5 text-center">No need to clean before returning</p>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-12 text-center">
+            <btn class="btn btn-lg btn-danger order-online">Text +1-415-813-1881 or email info@lastminutegear.com</btn>
+          </div>
+        </div>
+          
+      </div>
+    </div>
+  </section>
+
+  <a name="expert-help"></a>
+  <section class="container pb-5 mt-5">
+    <div class="row m-3">
+      <div class="col-12 text-center">
+        <h2>Expert Help</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-8 offset-2 col-xxl-6 offset-xxl-3">
+        <!-- unlike how it works section, here even in xs we have a slight offset since the images are really big otherwise; not to mention since this is in a container-fluid, the col-12 extends further on screen than in how it works section -->
+        <div class="card-group">
+          <div class="card">
+            <div class=" ratio ratio-4x3">
+              <!-- using ratio allows image heights to align well -->
+              <img alt="Rack of sleeping bags" title="Rack of sleeping bags" class="card-img-top w-100 cld-responsive" data-src="https://res.cloudinary.com/www-lastmingear-com/image/upload/c_fill,dpr_auto,f_auto,w_auto/c_limit,w_auto/v1/Protips/jumbotron/how_to_store_and_maintain_your_gear.jpg" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"><a class="text-reset stretched-link" target="_blank" href="https://www.lastminutegear.com/gear-guides">Gear Guides</a></h5>
+              <p class="card-text">Accessible enough for beginners & technical enough for seasoned adventurers</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class=" ratio ratio-4x3">
+              <!-- using ratio allows image heights to align well -->
+              <img alt="Boulder with gear in front of Half Dome in Yosemite National Park" title="Half Dome" class="w-100 card-img-top cld-responsive" data-src="https://res.cloudinary.com/www-lastmingear-com/image/upload/c_fill,dpr_auto,f_auto,w_auto/c_limit,w_auto/v1/Protips/Half%20Dome/Route_J.jpg" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"><a class="text-reset stretched-link" target="_blank" href="https://www.lastminutegear.com/protips">Protips</a></h5>
+              <p class="card-text">Packing lists, tips on where to go, and general advice for your outdoor adventures</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class=" ratio ratio-4x3">
+              <!-- using ratio allows image heights to align well -->
+              <img alt="Zipper on bag" title="Zipper on bag" class="card-img-top w-100 cld-responsive" data-src="https://res.cloudinary.com/www-lastmingear-com/image/upload/c_fill,dpr_auto,f_auto,w_auto/c_limit,w_auto/v1/Jumbotron/gear_repair.jpg" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"><a class="text-reset stretched-link" target="_blank" href="https://www.lastminutegear.com/gear-repair-and-cleaning-services">Repair &amp; Cleaning</a></h5>
+              <p class="card-text">We repair rips in tents, patch holes in sleeping pads, wash sleeping bags, and more!</pz>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <a name="about-the-founder"></a>
+  <section class="container-fluid bg-light py-5">
+    <div class="row m-3">
+      <div class="col-12 text-center pb-2">
+        <h2>About the founder</h2>
+      </div>
+      <div class="col-8 offset-2 col-md-4 offset-md-4 col-lg-2 offset-lg-5 pb-2">
+        <img alt="Founder standing in front of shop" title="Founder standing in front of shop" itemprop="image" class="w-100 cld-responsive" data-src="https://res.cloudinary.com/www-lastmingear-com/image/upload/c_scale,dpr_auto,f_auto,r_max,w_auto/c_limit,w_auto/v1/Team/james2.png" />
+      </div>
+      <div class="col-12 offset-0 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+        <p>Hi, I'm <a class="link" target="_blank" href="https://www.linkedin.com/in/jmzbond">James</a>. My first taste of the outdoors was with an inner city youth organization in Texas that let me borrow gear for an upcoming camping trip(read: I have indoorsy parents). These early experiences created a lifelong love for exploring the backcountry. I started Last Minute Gear to do for others what that youth organization did for me: give access to the outdoors, in a low cost way that also doesn't perpetuate unnecessary overconsumption and actually reduces waste.</p>
+        <!-- <p>Unfortunately COVID has hit us so hard, I am down to the last experiment to try to keep this last, small, independent outdoor gear business alive. If you want to invest in our mission or takeover and run  your very own gear shop, email me: . Read more about our situation in parts , and .</p> -->
+      </div>
+    </div>
+        <!-- <div class="row" style="color:gray">
+              <div class="col-12">
+                <p class='small-text fw-bold'>Work at Last Minute Gear!</p>
+                <p class='disclaimer'>Experienced with gear & the outdoors? Want to work in a small environment where you can make a difference? We may not always be looking, but you're always welcome to check in with us! Send us a message . </p>
+                <p>Hint: <a data-bs-toggle="modal" data-bs-target="#job_modal" class="link-primary">here's</a> how to really stand out!</p>
+              </div>
+        </div> -->
+  </section>
+
+
+</main>
+
+
+  <!-- footer not desirable for some pages that are pseudo action (e.g., order-lookup) -->
+  <!-- also note, since footer has a container-fluid that causes it to go full widht, it specifically cannot be in the 1_in_page_templates, since those are all wrapped by a section container and then a row g-3 for spacing purposes  -->
+  <footer class="container-fluid bg-light p-2 ">
+  <div class="row">
+    <div class="col-12 col-md-8 offset-md-2">
+      <div class="row align-items-center text-center">
+        <div class="col-4">
+          <a class=" text-reset" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="contactInfo" href="#contactInfo">Contact Info</a>
+        </div>
+        <div class="col-4"> 
+          <a class=" text-reset" target="_blank" href="https://www.lastminutegear.com/terms-of-service">Terms of Service</a>
+        </div>
+        <div class="col-4">
+          <a class=" text-reset" target="_blank" href="https://www.lastminutegear.com/privacy-policy">Privacy Policy</a>
+        </div>
+<!--         <div class="col-3">
+        </div> -->
+      </div>
+    </div>
+  </div>
+  <div class="row mt-2 mb-2">
+    <div class="col-10 offset-1 col-md-8 offset-md-2">
+      <div class="card card-body collapse" id="contactInfo">
+        <dl>
+          <dt>For general questions:</dt>
+          <dd>
+            We <em>do</em> understand you’d like to speak to someone; as a <em>tiny</em> business, in order for us to keep up our low prices, we’d <em>really</em> appreciate your taking 2-3 minutes to review the <a class="link-primary" target="_blank" href="https://www.lastminutegear.com/frequently-asked-questions">FAQs</a>, which can quickly answer 90% of all questions!
+            <ul>
+              <li>Text +1-415-813-1881, we try to respond within 1 business day</li>
+              <li>Email <a class="link-primary" target="_blank" href="/cdn-cgi/l/email-protection#b7ded9d1d8f7dbd6c4c3daded9c2c3d2d0d2d6c599d4d8da"><span class="__cf_email__" data-cfemail="036a6d656c436f6270776e6a6d767766646662712d606c6e">[email&#160;protected]</span></a>, we try to respond within 1 business day</li>
+            </ul>
+          </dd>
+
+          <dt>For changing an order:</dt>
+          <dd>Most changes can be made from your order dashboard (see confirmation email) up to 24 hours before the start of your pickup time window. Otherwise, contact us as indicated above</dd>
+
+          <dt>For pickup & return self-service help:</dt>
+          <dd>See the troubleshooter on each page during the self-service process. Most issues are easily resolved with attentively following the instructions, if it doesn't work, you'll have to contact us, but please note that unfortunately at the moment we cannot offer on-demand support.</dd>
+
+          <dt>For business inquiries:</dt> 
+          <dd>For partnerships, media inquiries, business development, or other inquiries, email <a class="link-primary" target="_blank" href="/cdn-cgi/l/email-protection#2b42454d446b474a585f4642455e5f4e4c4e4a5905484446"><span class="__cf_email__" data-cfemail="234a4d454c634f4250574e4a4d565746444642510d404c4e">[email&#160;protected]</span></a></dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</footer>
+
